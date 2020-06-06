@@ -15,7 +15,7 @@ NULL ไม่มี parameter,stack 60KB, ส่งเข้า function   defa
 ทดสอบแล้ว ทำงานปรกติ  
   - เมื่อ เปิด server database อ่าน ram ส่ง realtime clear ram
   -เมื่อ ปิด server database packdata เขียนลง ram ไปเรื่อยๆ จนถึง 32KB write ลง SDcard
-   ยังไม่ได้ทดสอบ อ่านส่งจาก SDcard (history)
+   ยังไม่ได้ทดสอบ อ่านส่งจาก SDcard (history) ทดสอบต่อไป 
 
 ***task ที่จะทำต่อไป คือ เมื่อขณะ write sdcard  การ packdata จะหยุด เขียน ram 
    task นี้ จะ Start ตอน เริ่ม write sdcard ทำงาน packdata I/O ปรกติ ที่จะทดลองคือ ไปเก็บ data
@@ -25,3 +25,7 @@ NULL ไม่มี parameter,stack 60KB, ส่งเข้า function   defa
 ใน version นี้  void loop() ใน main program จะ run เพียง function_ota()
 เพื่อรอรับ คำสั่ง OTA จากหน้า web 
 
+![img](https://iotfmx.com/imgtest/TestMcon_060620/test0106.png)
+![img](https://iotfmx.com/imgtest/TestMcon_060620/test0206.png)
+![img](https://iotfmx.com/imgtest/TestMcon_060620/test0306.png)
+![img](https://iotfmx.com/imgtest/TestMcon_060620/test0406.png)
