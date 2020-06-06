@@ -299,55 +299,6 @@ void data_time()
 
   //delay(1000);
 }
-/*
-void sendmqtt()
-{
-  
-  //  Serial.println("Save DATA To FRAM.");
-
-  if (write_addeeprom >= 32000) //32000  //ถ้าเขียนถึง address ที่ 32000 ให้เอาข้อมูลทั้งหมดใส่ใน file sdcard
-  {
-    Serial.println("Please wait for read RAM To SDCARD");
-    String datab;
-    const char * datasavesdcard;
-    datab = mac.read_all();
-    
-    datasavesdcard = datab.c_str();
-    listcountfileindir(SD, "/history");
-    delay(100);
-    if (countfileinsd >= FILE_COUNT_INHISTORYSD) { //FILE_COUNT_INHISTORYSD
-      const char * delfile;
-      delfile = buffilenamedel.c_str();
-      deleteFile(SD, delfile);
-      countfileinsd = 0;
-    }
-    String a = "/history/" + filenames + ".txt";
-    File file = SD.open("/history");
-    if (!file)
-    {
-      Serial.println("Create Directory");
-      SD.mkdir("/history");
-    }
-    filenamesavesd = a.c_str() ;
-    //    writeFile(SD, filenamesavesd , datasavesdcard);
-    if (!writeFile(SD, filenamesavesd , datasavesdcard)) {
-      Serial.println("******** Write DATA TO SDCARD Success ********");
-      //Create file in sd card success update address eeprom = 0
-      mac.writeAddress(writeaddr_eeprom1, 0); 
-      mac.writeAddress(writeaddr_eeprom2, 0);
-      write_addeeprom = 0;
-      filename++;
-    } else {
-      Serial.println("Can't Save SD Card To RAM");
-    }
-
-
-  }
-  
-
-  checkandsendmqtt(sText, write_addeeprom);
-}
-*/
 
 
 void sendsdcardtomqtt() {
