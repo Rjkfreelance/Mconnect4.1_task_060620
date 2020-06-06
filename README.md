@@ -1,6 +1,6 @@
 # Mconnect4.1_task_060620
-06/06/2020 version Mconnect4.1_task_060620 นี้ มี 2 Tasks 
-task_CheckWiFiMqtt
+version Mconnect4.1_task_060620 นี้ มี 2 Tasks 
+ task_CheckWiFiMqtt,
  task_PackdataSend
  run บน core1 ทั้ง 2 tasks
 
